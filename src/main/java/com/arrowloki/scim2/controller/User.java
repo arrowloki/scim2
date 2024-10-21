@@ -10,4 +10,10 @@ public class User {
         String s = "Hi Lokesh";
         return s;
     }
+
+    @GetMapping("/about")
+    public String About(){
+        String s = "Hi Loki";
+        return s;
+    }
 }
