@@ -1,30 +1,15 @@
-package com.arrowloki.scim2.model;
+package com.arrowloki.scim2.dto;
 
-import jakarta.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "scim_users")
-public class User {
+public class ScimUserResponse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String userName;
     private String firstName;
     private String lastName;
-
-    @ElementCollection
-    @CollectionTable(name = "user_emails", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "email")
-    private List<String> emails = new ArrayList<>();
-
-    @ElementCollection
-    @CollectionTable(name = "user_phone_numbers", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "phone_number")
-    private List<String> phoneNumbers = new ArrayList<>();
+    private List<String> emails;
+    private List<String> phoneNumbers;
 
     // Getters and Setters
     public Long getId() {
