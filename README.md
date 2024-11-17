@@ -3,5 +3,5 @@ To do
 
 validate the endpoints
 add meta
-add schemas
+add schemaskkn
 etc...
