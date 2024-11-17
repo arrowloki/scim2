@@ -13,7 +13,7 @@ public class User {
 
     @GetMapping("/about")
     public String About(){
-        String s = "Hi Loki";
+        String s = "Hi DB";
         return s;
     }
 }
